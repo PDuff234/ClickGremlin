@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClickGremlin</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <h1>ClickGremlin</h1>
+      <p class="subtitle">Chase Offers Helper</p>
+
+      <section class="controls">
+        <button id="scanBtn" class="btn btn-secondary">Scan</button>
+        <button id="addAllBtn" class="btn btn-primary">Add All</button>
+        <button id="stopBtn" class="btn btn-danger">Stop</button>
+      </section>
+
+      <section class="status">
+        <h2>Run Summary</h2>
+        <dl>
+          <div><dt>Offers Found</dt><dd id="offersFound">0</dd></div>
+          <div><dt>Addable</dt><dd id="addable">0</dd></div>
+          <div><dt>Added Now</dt><dd id="addedNow">0</dd></div>
+          <div><dt>Skipped</dt><dd id="skipped">0</dd></div>
+          <div><dt>Errors</dt><dd id="errors">0</dd></div>
+        </dl>
+      </section>
+
+      <section class="console">
+        <h2>Status</h2>
+        <pre id="statusText">Ready.</pre>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
