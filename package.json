@@ -1,0 +1,13 @@
+{
+  "name": "clickgremlin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chase offers helper browser extension",
+  "scripts": {
+    "lint": "eslint src/*.js",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "eslint": "^9.20.1"
+  }
+}
