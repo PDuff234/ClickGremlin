@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "ClickGremlin - Chase Offers Helper",
+  "description": "Human-in-the-loop helper for scanning and adding eligible Chase offers.",
+  "version": "0.1.0",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "https://*.chase.com/*"
+  ],
+  "action": {
+    "default_title": "ClickGremlin",
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.chase.com/*"],
+      "js": ["src/util.js", "src/chaseAdapter.js", "src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
