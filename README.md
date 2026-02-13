@@ -33,6 +33,18 @@ ClickGremlin is a Manifest V3 browser extension that helps you scan and add elig
    - **Add All**: clicks each addable offer with safe pacing
    - **Stop**: kill switch; run stops within about one offer
 
+
+## Current Chase DOM assumptions
+
+The adapter is currently tuned for Chase commerce tiles using markers like:
+
+- card: `data-testid="commerce-tile"`
+- add control: `data-testid="commerce-tile-button"` (icon inside the tile)
+- added state: `data-testid="offer-tile-alert-container-success"` or aria label containing `Success Added`
+- offers container hint: `div._1ljaqoe3`
+
+If Chase changes these attributes, update `src/chaseAdapter.js` selectors and rerun **Scan**.
+
 ## Debugging
 
 - Open page DevTools Console to see `[ClickGremlin]` logs from content scripts.
